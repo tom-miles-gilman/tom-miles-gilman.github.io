@@ -19,3 +19,13 @@ body {
 h1 {
     color: darkslategray;
 }
+
+#main-nav li{
+    border-bottom: 2px solid transparent;
+}
+
+main-nav li{  
+    border-bottom: 2px solid black;
+}
+
+
