@@ -9,7 +9,8 @@ body {
     background: #6B7330;
     padding: 5px;
     width: 80%;
-    margin: auto; /* center horizontally */
+    margin: auto; 
+    /* center horizontally */
     border-radius: 5px;
 }
 
