@@ -1,0 +1,80 @@
+/* Resetting default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body styling */
+  body {
+    font-family: 'Arial', sans-serif; /* Change to a more appealing font */
+    background-image: url('your-background-image.jpg'); /* Replace with your background image */
+    background-size: cover;
+    color: #333; /* Foreground color */
+  }
+  
+  /* Main Heading styling */
+  h1 {
+    color: #009688; /* Main heading color */
+  }
+  
+  /* Navigation styling */
+  #main-nav {
+    background-color: #004d40; /* Navigation background color */
+    padding: 10px;
+  }
+  
+  #main-nav a {
+    display: inline-block;
+    color: #fff; /* Navigation link color */
+    text-decoration: none;
+    padding: 8px 16px;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  #main-nav a:hover {
+    background-color: #00796b; /* Hover background color */
+  }
+  
+  /* Sub Heading styling */
+  h2 {
+    color: #009688; /* Sub heading color */
+  }
+  
+  /* Paragraph styling */
+  p {
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  /* Image styling */
+  img {
+    border: 2px solid #009688; /* Border around images */
+    padding: 5px; /* Padding around images */
+    margin-bottom: 20px;
+  }
+  
+  /* Table styling */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  th, td {
+    border: 1px solid #009688; /* Table cell borders */
+    padding: 8px;
+    text-align: center;
+  }
+  
+  /* Content div styling */
+  #content {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff; /* Content div background color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle lift effect */
+  }
+  

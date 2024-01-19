@@ -13,19 +13,28 @@ body {
     border-radius: 5px;
 }
 
-
-/* Typography */
-
 h1 {
     color: darkslategray;
+}
+
+#main-nav a {
+    /* Remove underline for link */
+    text-decoration: none;
+    color: forestgreen;
+
 }
 
 #main-nav li{
     border-bottom: 2px solid transparent;
 }
 
-main-nav li{  
+#main-nav li:hover {  
     border-bottom: 2px solid black;
+    text-underline-offset: 0.25em; /* Adjust the value to center the line properly */
+    display: inline-block;
 }
 
+ol {
+    list-style-position: inside;
+}
 
