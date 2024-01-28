@@ -3,32 +3,42 @@ body {
     background: #011F26;
 }
 
-/* Structure */
-#content {
+/* Assignments Section */
+#assignments-content {
     background: #5C7373;
+    padding: 5px;
+    width: 80%;
+    margin: auto;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Projects Section */
+#projects-content {
+    background: #4A6262;
     padding: 5px;
     width: 80%;
     margin: auto;
     border-radius: 5px;
 }
 
-h1 {
+h1, h2, h3 {
     color: #032612;
-    margin-left: 10px; /* Adjust the margin for your name */
+    margin-left: 10px;
 }
 
 .center {
     text-align: center;
 }
 
-.assignment-section {
+.assignment-section, .project-section {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     margin-top: 20px;
 }
 
-.assignment {
+.assignment, .project {
     text-align: center;
     border: 1px solid #027368;
     padding: 10px;
@@ -37,31 +47,38 @@ h1 {
     flex: 1;
     max-width: 300px;
     box-sizing: border-box;
+}
+
+.assignment {
     background-color: #027368;
 }
 
-.assignment h3 {
+.project {
+    background-color: #035C5C;
+}
+
+.assignment h3, .project h3 {
     color: #032612;
 }
 
-.assignment a {
+.assignment a, .project a {
     text-decoration: none;
     color: #032612;
 }
 
-.assignment img {
+.assignment img, .project img {
     max-width: 100%;
     height: auto;
     margin-bottom: 10px;
 }
 
-.assignment p {
+.assignment p, .project p {
     color: #032612;
 }
 
 /* Responsive design for small screens */
 @media only screen and (max-width: 768px) {
-    .assignment {
+    .assignment, .project {
         flex: 100%;
     }
 }
