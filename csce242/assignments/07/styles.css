@@ -1,0 +1,26 @@
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap; /* Prevent wrapping */
+  }
+  
+  .example {
+    text-align: center;
+    margin-top: 20px;
+    flex: 0 0 auto; /* Prevent flex items from growing or shrinking */
+  }
+  
+  img {
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    user-select: none;
+    display: block; /* Make sure images are block-level elements */
+  }
+  
+  .star {
+    position: absolute;
+    color: yellow;
+    pointer-events: none; /* Ignore clicks */
+  }
+  
