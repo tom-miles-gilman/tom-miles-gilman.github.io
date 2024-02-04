@@ -1,0 +1,68 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+    min-height: 100vh; /* make sure the html and body are at least the height of the viewport */
+    display: flex;
+    flex-direction: column; /* stack elements vertically */
+}
+
+.logo-container {
+    text-align: left;
+    padding: 20px;
+    background-color: #f4f4f4;
+    flex-shrink: 0; /* prevent this from shrinking */
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 10px 0;
+    flex-shrink: 0;
+}
+
+.nav-item {
+    color: white;
+    text-decoration: none;
+    padding: 5px 20px;
+}
+
+.nav-item:hover {
+    background-color: #555;
+}
+
+.content {
+    flex-grow: 1; /* make the main content grow to fill the space */
+    padding: 20px; /* spacing around the content */
+}
+
+.about-section {
+    max-width: 800px; /* adjust as per your design requirements */
+    margin: auto; /* center the section */
+}
+
+.placeholder-box {
+    width: 200px; /* placeholder width */
+    height: 150px; /* placeholder height */
+    background-color: #ddd; /* placeholder color */
+    margin-top: 20px; /* space above the placeholder */
+}
+
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    flex-shrink: 0; /* prevent this from shrinking */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .nav-bar {
+        flex-direction: column; /* stack nav items on small screens */
+    }
+    .nav-item {
+        padding: 10px; /* larger tap area for touch devices */
+    }
+}
