@@ -1,0 +1,99 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.logo-container {
+    padding: 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+    padding: 10px 0;
+}
+
+.nav-item {
+    color: white;
+    text-decoration: none;
+    padding: 5px 20px;
+}
+
+.nav-item:hover {
+    background-color: #555;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.era-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.text-content, .image-content {
+    flex-basis: 50%;
+}
+
+.text-content {
+    padding-right: 20px;
+}
+
+.image-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    margin-top: auto;
+}
+
+@media (max-width: 768px) {
+    .nav-bar {
+        flex-direction: column;
+    }
+    .nav-item {
+        padding: 10px;
+    }
+    .era-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .text-content, .image-content {
+        flex-basis: auto;
+    }
+    .text-content {
+        padding-right: 0;
+    }
+}
+
+/* Ensure footer sticks to the bottom */
+body {
+    position: relative;
+    padding-bottom: 60px; /* Height of the footer */
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}

@@ -16,10 +16,11 @@ body, html {
 
 .nav-bar {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
     background-color: #333;
     padding: 10px 0;
-    flex-shrink: 0;
+    flex-shrink: 0; /* prevent this from shrinking */
 }
 
 .nav-item {
