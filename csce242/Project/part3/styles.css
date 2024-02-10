@@ -7,7 +7,12 @@ body, html {
 .logo-container {
     text-align: left;
     padding: 20px;
-    background-color: #f4f4f4;
+    background-color: #f4f4f4;    
+}
+
+.logo-container a {
+    color: black; /* Change the color to black */
+    text-decoration: none; /* Remove the underline */
 }
 
 .nav-bar {

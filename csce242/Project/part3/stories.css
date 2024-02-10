@@ -7,11 +7,18 @@ body, html {
     min-height: 100vh;
 }
 
+
 .logo-container {
     text-align: left;
     padding: 20px;
-    background-color: #f4f4f4;
+    background-color: #f4f4f4;    
 }
+
+.logo-container a {
+    color: black; /* Change the color to black */
+    text-decoration: none; /* Remove the underline */
+}
+
 
 .nav-bar {
     display: flex;
@@ -19,6 +26,7 @@ body, html {
     align-items: center;
     background-color: #333;
     padding: 10px 0;
+    flex-shrink: 0; /* prevent this from shrinking */
 }
 
 .nav-item {
@@ -37,29 +45,22 @@ body, html {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Align to the left */
+    align-items: center;
 }
 
-.story {
-    width: 100%;
-    margin-bottom: 40px; /* Space between stories */
-}
-
-.story-content {
+.article-preview {
+    width: 80%; /* Adjust the width as necessary */
+    margin-bottom: 20px;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 10px;
+    align-items: center;
+    text-align: left;
 }
 
-.story-image {
-    width: 150px; /* Adjust size as needed */
-    height: 100px; /* Adjust size as needed */
-    background-color: #ddd; /* Placeholder for image */
-}
-
-.author {
-    align-self: flex-end; /* Align the author to the right */
+.placeholder-box {
+    width: 150px; /* Adjust the size as necessary */
+    height: 100px;
+    background-color: #ddd;
+    margin-right: 20px;
 }
 
 .footer {
@@ -67,6 +68,7 @@ body, html {
     padding: .5px;
     background-color: #333;
     color: white;
+    flex-shrink: 0;
 }
 
 @media (max-width: 768px) {
@@ -75,17 +77,5 @@ body, html {
     }
     .nav-item {
         padding: 10px;
-    }
-
-    .story-content {
-        flex-direction: column;
-    }
-
-    .story-image {
-        margin-bottom: 10px; /* Space between image and text */
-    }
-
-    .author {
-        align-self: flex-start; /* Align the author to the left on small screens */
     }
 }
