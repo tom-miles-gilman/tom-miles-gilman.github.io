@@ -7,11 +7,21 @@ body, html {
     min-height: 100vh;
 }
 
+
 .logo-container {
+    text-align: left;
     padding: 20px;
     background-color: #f4f4f4;
-    text-align: left;
+    flex-shrink: 0;
 }
+
+
+.logo-container a {
+    color: black; /* Change the color to black */
+    text-decoration: none; /* Remove the underline */
+}
+
+
 
 .nav-bar {
     display: flex;
@@ -67,6 +77,8 @@ body, html {
     margin-top: auto;
 }
 
+
+
 @media (max-width: 768px) {
     .nav-bar {
         flex-direction: column;
@@ -86,14 +98,15 @@ body, html {
     }
 }
 
+
 /* Ensure footer sticks to the bottom */
 body {
-    position: relative;
-    padding-bottom: 60px; /* Height of the footer */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .footer {
-    position: left;
-    bottom: 0;
-    width: 100%;
+    margin-top: auto;
+    text-align: left;
 }

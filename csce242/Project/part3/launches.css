@@ -5,10 +5,19 @@ body, html {
 }
 
 .logo-container {
+    text-align: left;
     padding: 20px;
     background-color: #f4f4f4;
-    text-align: left;
+    flex-shrink: 0;
 }
+
+
+.logo-container a {
+    color: black; /* Change the color to black */
+    text-decoration: none; /* Remove the underline */
+}
+
+
 
 .nav-bar {
     display: flex;
@@ -76,7 +85,6 @@ body, html {
     }
     .nav-item {
         padding: 10px;
-        margin-bottom: 00px;
     }
     .launches-container {
         grid-template-columns: 1fr 1fr; /* Two columns on smaller screens */
@@ -97,5 +105,6 @@ body {
 }
 
 .footer {
+    text-align: left;
     margin-top: auto; /* Push the footer to the bottom */
 }
