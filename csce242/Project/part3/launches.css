@@ -41,7 +41,7 @@ body, html {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: right;
 }
 
 .section-title {
@@ -55,7 +55,7 @@ body, html {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
     width: 100%;
-    max-width: 1200px; /* or whatever max width you prefer */
+    max-width: 1200px; 
     margin: 0 auto;
 }
 
@@ -66,7 +66,7 @@ body, html {
 }
 
 .launch-item img {
-    width: 100%; /* Adjust if needed */
+    width: 45%; /* Adjust if needed */
     height: auto;
     margin-bottom: 8px; /* Spacing between image and title */
 }
