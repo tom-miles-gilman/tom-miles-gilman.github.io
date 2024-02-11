@@ -8,20 +8,16 @@ body, html {
     text-align: left;
     padding: 20px;
     background-color: #f4f4f4;
-    flex-shrink: 0;
 }
-
 
 .logo-container a {
-    color: black; /* Change the color to black */
-    text-decoration: none; /* Remove the underline */
+    color: black;
+    text-decoration: none;
 }
-
-
 
 .nav-bar {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-around; /* Restored to evenly space items */
     background-color: #333;
     padding: 10px 0;
 }
@@ -37,63 +33,60 @@ body, html {
 }
 
 .content {
-    flex-grow: 1;
-    padding: 20px;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: right;
+    align-items: flex-start;
+    padding: 20px;
 }
 
 .section-title {
-    margin-bottom: 20px;
-    text-align: center;
-    width: 100%;
+    text-align: left;
 }
 
 .launches-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     gap: 20px;
     width: 100%;
-    max-width: 1200px; 
+    max-width: 1200px;
     margin: 0 auto;
 }
 
 .launch-item {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: flex-start;
+    width: 100%;
 }
 
 .launch-item img {
-    width: 45%; /* Adjust if needed */
+    max-width: 50px;
+    max-height: 50px;
+    width: auto;
     height: auto;
-    margin-bottom: 8px; /* Spacing between image and title */
+    margin-right: 8px;
 }
 
 .footer {
-    text-align: center;
+    display: flex;
+    justify-content: flex-start;
     padding: .5px;
     background-color: #333;
     color: white;
+    width: 100%;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .nav-bar {
         flex-direction: column;
+        align-items: center; /* Center align items for mobile */
     }
     .nav-item {
-        padding: 10px;
-    }
-    .launches-container {
-        grid-template-columns: 1fr 1fr; /* Two columns on smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .launches-container {
-        grid-template-columns: 1fr; /* One column on very small screens */
+        padding: 10px 0; /* Adjust padding for vertical layout */
     }
 }
 
@@ -105,6 +98,6 @@ body {
 }
 
 .footer {
+    margin-top: auto;
     text-align: left;
-    margin-top: auto; /* Push the footer to the bottom */
 }
