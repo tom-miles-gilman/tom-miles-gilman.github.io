@@ -78,3 +78,14 @@ h3 {
     color: white;
     flex-shrink: 0;
 }
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .nav-bar {
+        flex-direction: column; /* stack nav items on small screens */
+    }
+    .nav-item {
+        padding: 10px; /* larger tap area for touch devices */
+    }
+}

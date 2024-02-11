@@ -71,11 +71,13 @@ body, html {
     flex-shrink: 0;
 }
 
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
     .nav-bar {
-        flex-direction: column;
+        flex-direction: column; /* stack nav items on small screens */
     }
     .nav-item {
-        padding: 10px;
+        padding: 10px; /* larger tap area for touch devices */
     }
 }
