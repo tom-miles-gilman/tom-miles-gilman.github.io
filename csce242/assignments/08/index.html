@@ -22,8 +22,7 @@
     <main id="content">
         <div id="command-section" class="content-section">
             <h2>Enter Command</h2>
-            <p>Use the keyboard to interact with the character:</p>
-            <ul>
+            <ul class="command-list">
                 <li><strong>b:</strong> Read a book</li>
                 <li><strong>c:</strong> Act like a clown</li>
                 <li><strong>p:</strong> Have a birthday party</li>
@@ -31,13 +30,20 @@
                 <li><strong>s:</strong> Shovel up some dirt</li>
                 <li><strong>w:</strong> Go to work</li>
             </ul>
+            <img src="images/original.jpg" alt="Character Image" id="character-image">
             <input type="text" id="command-input" placeholder="Enter Command" autofocus>
-            <img src="placeholder1.png" alt="Character Image" id="character-image">
+            <p class="attribution">
+                Image by <a href="https://www.freepik.com/free-vector/hand-drawn-stickman-collection_20832062.htm#query=stick%20figure%20run&position=46&from_view=search&track=ais&uuid=22e87991-ee06-4dc2-8ea3-464d535e1a63">Freepik</a>
+            </p>
         </div>
         
         <div id="slider-section" class="content-section hidden">
             <h2>Yoga Slide</h2>
-            <img src="placeholder2.png" alt="Yoga Image" id="yoga-image">
+            <input type="range" id="image-slider" min="1" max="8" value="1">
+            <img src="images/yoga1.jpg" alt="Yoga Image" id="yoga-image">
+            <p class="attribution">
+                Image by <a href="https://www.freepik.com/free-vector/hand-drawn-stickman-collection_20832062.htm#query=stick%20figure%20run&position=46&from_view=search&track=ais&uuid=22e87991-ee06-4dc2-8ea3-464d535e1a63">Freepik</a>
+            </p>
         </div>
     </main>
 </div>
