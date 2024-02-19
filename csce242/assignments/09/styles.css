@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .assignment-container {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    background-color: #FFFFE0;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  h1, h2 {
+    color: #333;
+  }
+  
+  .ball-container {
+    height: 300px;
+    position: relative;
+    background-color: white;
+    border: 1px solid #000;
+    margin-top: 20px;
+  }
+  
+  .ball {
+    width: 50px;
+    height: 50px;
+    background-image: url('images/basketball.jpg'); 
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: calc(50% - 25px); /* Centers the ball horizontally */
+  }
+  
+  /* Styles for the Yoga Section */
+  .exercise {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .yoga-container {
+    flex-basis: 50%;
+    padding: 10px;
+  }
+  
+  .yoga-container img {
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .yoga-container img:hover {
+    transform: scale(1.05);
+  }
+  
+  .description-container {
+    flex-basis: 45%;
+    border: 1px solid #000;
+    padding: 20px;
+    height: 150px; 
+    text-align: left;
+    display: none; /* Initially hidden */
+  }
+  
+  footer {
+    margin-top: 20px;
+    font-style: italic;
+  }
+  
