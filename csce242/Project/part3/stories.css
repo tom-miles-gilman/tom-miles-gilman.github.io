@@ -5,20 +5,21 @@ body, html {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow-x: hidden; /* Ensures no horizontal scroll */
+    font-size: 16px; /* Base font size */
 }
-
 
 .logo-container {
     text-align: left;
     padding: 20px;
-    background-color: #f4f4f4;    
+    background-color: #f4f4f4;
+    box-sizing: border-box;
 }
 
 .logo-container a {
-    color: black; /* Change the color to black */
-    text-decoration: none; /* Remove the underline */
+    color: black;
+    text-decoration: none;
 }
-
 
 .nav-bar {
     display: flex;
@@ -26,7 +27,7 @@ body, html {
     align-items: center;
     background-color: #333;
     padding: 10px 0;
-    flex-shrink: 0; /* prevent this from shrinking */
+    box-sizing: border-box;
 }
 
 .nav-item {
@@ -46,38 +47,64 @@ body, html {
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-sizing: border-box;
+    width: 100%; /* Ensures content does not overflow the body */
 }
 
-.article-preview {
-    width: 80%; /* Adjust the width as necessary */
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    text-align: left;
+.story {
+    width: 100%; /* Ensures stories do not overflow the content area */
+    box-sizing: border-box;
 }
 
-.placeholder-box {
-    width: 150px; /* Adjust the size as necessary */
-    height: 100px;
-    background-color: #ddd;
-    margin-right: 20px;
+.story-content, .story-image {
+    width: 100%; /* Ensures story content and images are responsive */
+    max-width: 100%; /* Prevents content and images from exceeding their container */
+    height: auto; /* Keeps image aspect ratio intact */
+    box-sizing: border-box;
 }
 
 .footer {
     text-align: left;
-    padding: .5px;
+    padding: 0.5px;
     background-color: #333;
     color: white;
-    flex-shrink: 0;
+    box-sizing: border-box;
 }
-
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+    body, html {
+        font-size: 14px; /* Adjusts base font size for smaller screens */
+    }
+
     .nav-bar {
-        flex-direction: column; /* stack nav items on small screens */
+        flex-direction: column; /* Stacks navigation items vertically */
     }
+
     .nav-item {
-        padding: 10px; /* larger tap area for touch devices */
+        padding: 10px; /* Increases tap area for better accessibility */
     }
+
+    .content, .story, .story-content {
+        padding: 15px; /* Increases padding for better spacing on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    body, html {
+        font-size: 12px; /* Further reduces font size for very small screens */
+    }
+
+    .nav-item, .content, .footer {
+        font-size: 0.85rem; /* Adjusts font size for readability */
+    }
+
+    .story-content {
+        flex-direction: column; /* Stacks content vertically in very small screens */
+    }
+}
+
+* {
+    word-wrap: break-word;
+    overflow-wrap: break-word; /* Prevents text from overflowing */
 }
