@@ -1,0 +1,120 @@
+/* Resetting default styles for uniformity */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: 'Arial', sans-serif;
+  background-color: #e6f7ff; /* Light blue background */
+}
+
+/* Container for the tree cards */
+#treeContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Style for each tree card */
+.tree-section {
+  background-color: #ffffff; /* White background for the cards */
+  border-radius: 10px; /* Rounded corners for the cards */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  width: 200px; /* Width for the cards */
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.tree-section:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+/* Style for the tree title */
+.tree-section h2 {
+  background-color: #a2d9ce; /* Light green background for titles */
+  color: white; /* White text color */
+  text-align: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc; /* Separation from the image */
+}
+
+/* Style for the tree images */
+.tree-section img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Full-screen modal styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Sit on top of everything */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.4); /* Black with opacity for the backdrop */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Style for the modal content */
+.modal-content {
+  background-color: #ffffff; /* White background for modal content */
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%; /* Adjust the width as needed */
+  border-radius: 10px; /* Rounded corners for modal */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5); /* Shadow for modal content */
+  position: relative; /* For positioning the close button */
+}
+
+/* Style for the close button of the modal */
+.close {
+  color: #aaaaaa; /* Light grey color for the 'X' button */
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000; /* Darker color on hover for contrast */
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Style for the details within the modal */
+.tree-details {
+  color: #333333; /* Dark grey color for readability */
+  font-size: 16px; /* Slightly larger font size for details */
+  line-height: 1.6; /* Space between lines */
+}
+
+/* Style for the title within the modal */
+.tree-details h2 {
+  margin-bottom: 20px; /* Space below the title */
+}
+
+/* Style for the paragraphs within the modal */
+.tree-details p {
+  margin-bottom: 10px; /* Space between paragraphs */
+}
+
+/* Style for the image within the modal */
+#treeImage {
+  max-width: 100%; /* Full width of the modal content */
+  height: auto;
+  margin-top: 20px; /* Space above the image */
+}
