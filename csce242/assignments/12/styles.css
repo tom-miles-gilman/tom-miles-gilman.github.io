@@ -1,0 +1,92 @@
+/* Basic Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Container for the house plans */
+#container {
+    width: 80%;
+    max-width: 1200px; /* Adjust as needed */
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Individual house plan container */
+.house {
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+/* House name */
+.house h2 {
+    color: #333;
+    margin-top: 0;
+}
+
+/* Main house image styling */
+.main-house-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto; /* Centers the image */
+}
+
+/* Details section */
+.details {
+    margin-top: 20px;
+}
+
+/* Features list */
+.details ul {
+    list-style: inside square;
+    padding: 0;
+}
+
+.details li {
+    margin: 5px 0;
+    padding: 5px;
+    background-color: #eee;
+    border-radius: 4px;
+}
+
+/* Floor plans section */
+.floor-plans {
+    margin-top: 20px;
+}
+
+.floor-plan {
+    margin-bottom: 20px;
+}
+
+.floor-plan h3 {
+    margin: 10px 0;
+    color: #555;
+}
+
+/* Floor plan images */
+.floor-plan-image {
+    max-width: 50%;
+    height: auto;
+    display: block;
+    margin: 10px auto; /* Adjust this as necessary */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    #container {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .main-house-image, .floor-plan-image {
+        max-width: 90%;
+    }
+}
