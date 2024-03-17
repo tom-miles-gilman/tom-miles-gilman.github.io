@@ -5,15 +5,14 @@ body, html {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    overflow-x: hidden; /* Ensures no horizontal scroll */
-    font-size: 16px; /* Base font size */
+    overflow-x: hidden;
+    font-size: 16px;
 }
 
 .logo-container {
     text-align: left;
     padding: 20px;
     background-color: #f4f4f4;
-    box-sizing: border-box;
 }
 
 .logo-container a {
@@ -27,7 +26,6 @@ body, html {
     align-items: center;
     background-color: #333;
     padding: 10px 0;
-    box-sizing: border-box;
 }
 
 .nav-item {
@@ -41,70 +39,41 @@ body, html {
     background-color: #555;
 }
 
-.content {
+.content, .submit-story {
     flex-grow: 1;
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-sizing: border-box;
-    width: 100%; /* Ensures content does not overflow the body */
 }
 
-.story {
-    width: 100%; /* Ensures stories do not overflow the content area */
+.story, .submit-story form {
+    width: 100%;
     box-sizing: border-box;
 }
 
 .story-content, .story-image {
-    width: 100%; /* Ensures story content and images are responsive */
-    max-width: 100%; /* Prevents content and images from exceeding their container */
-    height: auto; /* Keeps image aspect ratio intact */
-    box-sizing: border-box;
+    width: 100%;
+    height: auto;
 }
 
 .footer {
-    text-align: left;
-    padding: 0.5px;
+    text-align: center;
+    padding: 0.5em;
     background-color: #333;
     color: white;
-    box-sizing: border-box;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    body, html {
-        font-size: 14px; /* Adjusts base font size for smaller screens */
-    }
-
-    .nav-bar {
-        flex-direction: column; /* Stacks navigation items vertically */
-    }
-
-    .nav-item {
-        padding: 10px; /* Increases tap area for better accessibility */
-    }
-
-    .content, .story, .story-content {
-        padding: 15px; /* Increases padding for better spacing on smaller screens */
-    }
+/* Form Styles */
+.submit-story h2 {
+    margin-bottom: 15px;
 }
 
-@media (max-width: 480px) {
-    body, html {
-        font-size: 12px; /* Further reduces font size for very small screens */
-    }
-
-    .nav-item, .content, .footer {
-        font-size: 0.85rem; /* Adjusts font size for readability */
-    }
-
-    .story-content {
-        flex-direction: column; /* Stacks content vertically in very small screens */
-    }
+.submit-story form {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-* {
-    word-wrap: break-word;
-    overflow-wrap: break-word; /* Prevents text from overflowing */
-}
+.submit-story form label, .submit-story form input, .submit-story

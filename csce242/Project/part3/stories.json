@@ -1,0 +1,12 @@
+[
+    {
+      "_id": 1,
+      "img_name": "images/story1.jpg",
+      "title": "Title of Story 1",
+      "text": "Text of Story 1",
+      "author": "Author Name",
+      "date": "2024-03-16",
+      "extraInfo": ["Data 1", "Data 2", "Data 3"]
+    }
+  ]
+  

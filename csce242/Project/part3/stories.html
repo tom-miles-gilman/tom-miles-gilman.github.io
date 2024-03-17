@@ -28,7 +28,7 @@
         <h2>STORY 1</h2>
         <div class="story-content">
             <img src="photos/GeneratedSpace1.jpg" alt="Story Image" class="story-image">
-            <h4>Private Space Travel Company Unveils Plans for Lunar Tourism: </h4>
+            <h4>Private Space Travel Company Unveils Plans for Lunar Tourism:</h4>
             <p>A prominent private space travel company announces its ambitious plans to offer commercial trips to the Moon for tourists within the next decade. The company reveals details about the spacecraft design, itinerary, and pricing, sparking excitement and debate about the future of space tourism.</p>
         </div>
         <p class="author">AUTHOR</p>
@@ -46,7 +46,7 @@
         <h2>STORY 3</h2>
         <div class="story-content">
             <img src="photos/GeneratedSpace3.jpg" alt="Story Image" class="story-image">
-            <h4>International Space Station Celebrates 25 Years of Continuous Human Presence: </h4>
+            <h4>International Space Station Celebrates 25 Years of Continuous Human Presence:</h4>
             <p>The International Space Station (ISS) marks a historic milestone as it reaches 25 years of uninterrupted human habitation in low Earth orbit. Astronauts aboard the station commemorate the occasion with special ceremonies and reflect on the scientific achievements and international collaboration that have characterized the ISS program.</p>
         </div>
         <p class="author">AUTHOR</p>
@@ -55,17 +55,32 @@
         <h2>STORY 4</h2>
         <div class="story-content">
             <img src="photos/GeneratedSpace4.jpg" alt="Story Image" class="story-image">
-            <h4>China Launches First Crewed Mission to its Space Station: </h4>
+            <h4>China Launches First Crewed Mission to its Space Station:</h4>
             <p> China successfully launches its inaugural crewed mission to its recently completed space station module, marking a significant milestone in the nation's space exploration ambitions. The crew conducts experiments, tests systems, and establishes a continuous human presence aboard the Chinese space station, enhancing China's role in space exploration.</p>
         </div>
         <p class="author">AUTHOR</p>
     </article>
+    <!-- Insert more stories as you like -->
 </main>
+
+<section class="submit-story">
+    <h2>Submit Your Story</h2>
+    <form id="storyForm">
+        <label for="storyTitle">Story Title:</label>
+        <input type="text" id="storyTitle" name="storyTitle" required><br><br>
+        <label for="storyImg">Image Name (in images/ directory):</label>
+        <input type="text" id="storyImg" name="storyImg" required><br><br>
+        <label for="storyText">Story Text:</label>
+        <textarea id="storyText" name="storyText" required></textarea><br><br>
+        <input type="submit" value="Submit Story">
+    </form>
+</section>
 
 <footer class="footer">
     <p>@ThomasGilman</p>
     <p>2024</p>
 </footer>
 
+<script src="loadStories.js"></script>
 </body>
 </html>
