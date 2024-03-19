@@ -1,23 +1,29 @@
-document.addEventListener('DOMContentLoaded', function() {
-    fetch('stories.json')
-    .then(response => response.json())
-    .then(data => displayStories(data))
-    .catch(error => console.error('Error loading stories:', error));
-});
+document.getElementById('storyForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // Prevent the default form submission behavior
 
-function displayStories(stories) {
-    const content = document.querySelector('.content');
-    stories.forEach(story => {
-        const article = document.createElement('article');
-        article.className = 'story';
-        article.innerHTML = `
-            <h2>${story.title}</h2>
-            <div class="story-content">
-                <img src="${story.img_name}" alt="Story Image" class="story-image">
-                <p>${story.text}</p>
-            </div>
-            <p class="author">${story.author} - ${story.date}</p>
-        `;
-        content.appendChild(article);
-    });
-}
+    // Retrieve the form data
+    const storyTitle = document.getElementById('storyTitle').value;
+    const storyImg = document.getElementById('storyImg').value;
+    const storyText = document.getElementById('storyText').value;
+
+    // Create the story article
+    const article = document.createElement('article');
+    article.classList.add('story');
+
+    // Add the story content
+    article.innerHTML = `
+        <h2>${storyTitle}</h2>
+        <div class="story-content">
+            <img src="photos/${storyImg}" alt="Story Image" class="story-image">
+            <p>${storyText}</p>
+        </div>
+        <p class="author">Submitted by a visitor</p>
+    `;
+
+    // Append the new story to the main content
+    const mainContent = document.querySelector('.content');
+    mainContent.appendChild(article);
+
+    // Optional: Clear the form fields after submission
+    document.getElementById('storyForm').reset();
+});
