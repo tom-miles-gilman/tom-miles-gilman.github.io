@@ -2,9 +2,9 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
-    min-height: 100vh; /* make sure the html and body are at least the height of the viewport */
+    min-height: 100vh;
     display: flex;
-    flex-direction: column; /* stack elements vertically */
+    flex-direction: column;
 }
 
 .logo-container {
@@ -14,13 +14,10 @@ body, html {
     flex-shrink: 0;
 }
 
-
 .logo-container a {
-    color: black; /* Change the color to black */
-    text-decoration: none; /* Remove the underline */
+    color: black;
+    text-decoration: none;
 }
-
-
 
 .nav-bar {
     display: flex;
@@ -28,7 +25,7 @@ body, html {
     align-items: center;
     background-color: #333;
     padding: 10px 0;
-    flex-shrink: 0; /* prevent this from shrinking */
+    flex-shrink: 0;
 }
 
 .nav-item {
@@ -42,20 +39,57 @@ body, html {
 }
 
 .content {
-    flex-grow: 1; /* make the main content grow to fill the space */
-    padding: 20px; /* spacing around the content */
+    flex-grow: 1;
+    padding: 20px;
 }
 
-.about-section {
-    max-width: 800px; /* adjust as per your design requirements */
-    margin: auto; /* center the section */
+.about-section, .contact-form-section {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.placeholder-box {
-    width: 200px; /* placeholder width */
-    height: 150px; /* placeholder height */
-    background-color: #ddd; /* placeholder color */
-    margin-top: 20px; /* space above the placeholder */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group textarea {
+    height: 100px;
+}
+
+#contactForm button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#contactForm button:hover {
+    background-color: #555;
+}
+
+#formFeedback {
+    margin-top: 10px;
+    color: green;
 }
 
 .footer {
@@ -66,25 +100,18 @@ body, html {
     margin-top: auto;
 }
 
-/* Ensure footer sticks to the bottom */
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-.footer {
-    margin-top: auto;
-    text-align: left;
-}
-
-
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .nav-bar {
-        flex-direction: column; /* stack nav items on small screens */
+        flex-direction: column;
     }
+    
     .nav-item {
-        padding: 10px; /* larger tap area for touch devices */
+        padding: 10px;
+    }
+    
+    .about-section, .contact-form-section {
+        margin: 10px;
+        padding: 15px;
     }
 }
