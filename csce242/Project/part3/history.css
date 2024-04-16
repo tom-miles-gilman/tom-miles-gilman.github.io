@@ -1,3 +1,4 @@
+/* General settings for the body and html */
 body, html {
     margin: 0;
     padding: 0;
@@ -7,7 +8,7 @@ body, html {
     min-height: 100vh;
 }
 
-
+/* Styling for the logo container */
 .logo-container {
     text-align: left;
     padding: 20px;
@@ -15,14 +16,12 @@ body, html {
     flex-shrink: 0;
 }
 
-
 .logo-container a {
-    color: black; /* Change the color to black */
-    text-decoration: none; /* Remove the underline */
+    color: black; /* Color changed to black */
+    text-decoration: none; /* No underline for the link */
 }
 
-
-
+/* Styling for the navigation bar */
 .nav-bar {
     display: flex;
     justify-content: space-around;
@@ -40,6 +39,7 @@ body, html {
     background-color: #555;
 }
 
+/* Main content area styling */
 .content {
     flex-grow: 1;
     padding: 20px;
@@ -48,6 +48,7 @@ body, html {
     align-items: center;
 }
 
+/* Section for era details with images and text */
 .era-section {
     display: flex;
     justify-content: space-between;
@@ -56,18 +57,16 @@ body, html {
     width: 100%;
 }
 
+/* Styling for images with increased left margin */
 .image-content {
-    flex-basis: 30%; /* Adjust the width of the image content */
-    margin-left: 20px; /* Add some margin between the text and image content */
+    flex-basis: 30%; /* Maintain the width of the image content */
+    margin-left: 20px; /* Further increase left margin */
 }
 
+/* Styling for text content */
 .text-content {
-    flex-basis: 70%; /* Adjust the width of the text content */
-}
-
-
-.text-content {
-    padding-right: 20px;
+    flex-basis: 70%;
+    padding-right: 1px;
 }
 
 .image-content img {
@@ -75,6 +74,7 @@ body, html {
     align-items: right;
 }
 
+/* Footer styling */
 .footer {
     text-align: center;
     padding: 10px;
@@ -83,8 +83,7 @@ body, html {
     margin-top: auto;
 }
 
-
-
+/* Responsive styling for smaller screens */
 @media (max-width: 768px) {
     .nav-bar {
         flex-direction: column;
@@ -101,29 +100,5 @@ body, html {
     }
     .text-content {
         padding-right: 0;
-    }
-}
-
-
-/* Ensure footer sticks to the bottom */
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-.footer {
-    margin-top: auto;
-    text-align: left;
-}
-
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .nav-bar {
-        flex-direction: column; /* stack nav items on small screens */
-    }
-    .nav-item {
-        padding: 10px; /* larger tap area for touch devices */
     }
 }

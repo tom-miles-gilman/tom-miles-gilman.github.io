@@ -58,7 +58,7 @@ body, html {
 }
 
 .footer {
-    text-align: center;
+    text-align: left;
     padding: 0.5em;
     background-color: #333;
     color: white;
@@ -77,3 +77,4 @@ body, html {
 }
 
 .submit-story form label, .submit-story form input, .submit-story
+{}
