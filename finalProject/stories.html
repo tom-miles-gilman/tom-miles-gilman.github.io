@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Launch Site</title>
+<link rel="stylesheet" href="stories.css">
+</head>
+<body>
+
+    <div class="logo-container">
+        <a href="https://tom-miles-gilman.github.io/csce242/Project/part3/mainPage.html">
+            <h1>Launch Site</h1>
+        </a>
+    </div>    
+
+<nav class="nav-bar">
+    <a href="https://tom-miles-gilman.github.io/csce242/Project/part3/mainPage.html" class="nav-item">HOME</a>
+    <a href="https://tom-miles-gilman.github.io/csce242/Project/part3/stories.html" class="nav-item">STORIES</a>
+    <a href="https://tom-miles-gilman.github.io/csce242/Project/part3/news.html" class="nav-item">AGENCY NEWS</a>
+    <a href="https://tom-miles-gilman.github.io/csce242/Project/part3/launches.html" class="nav-item">LAUNCHES</a>
+    <a href="https://tom-miles-gilman.github.io/csce242/Project/part3/history.html" class="nav-item">HISTORY</a>
+    <a href="https://tom-miles-gilman.github.io/csce242/Project/part3/about.html" class="nav-item">ABOUT</a>
+</nav>
+
+<main class="content">
+    <article class="story">
+        <h2>STORY 1</h2>
+        <div class="story-content">
+            <img src="photos/GeneratedSpace1.jpg" alt="Story Image" class="story-image">
+            <h4>Private Space Travel Company Unveils Plans for Lunar Tourism:</h4>
+            <p>A prominent private space travel company announces its ambitious plans to offer commercial trips to the Moon for tourists within the next decade. The company reveals details about the spacecraft design, itinerary, and pricing, sparking excitement and debate about the future of space tourism.</p>
+        </div>
+        <p class="author">AUTHOR</p>
+    </article>
+    <article class="story">
+        <h2>STORY 2</h2>
+        <div class="story-content">
+            <img src="photos/GeneratedSpace2.jpg" alt="Story Image" class="story-image">
+            <h4>NASA Rover Discovers Evidence of Ancient Life on Mars:</h4>
+            <p> NASA's latest Mars rover, equipped with advanced scientific instruments, makes a groundbreaking discovery of organic molecules and microbial fossils in Martian soil samples. The findings reignite speculation about the possibility of past or present life on the Red Planet and inspire renewed interest in future Mars exploration missions.</p>
+        </div>
+        <p class="author">AUTHOR</p>
+    </article>
+    <article class="story">
+        <h2>STORY 3</h2>
+        <div class="story-content">
+            <img src="photos/GeneratedSpace3.jpg" alt="Story Image" class="story-image">
+            <h4>International Space Station Celebrates 25 Years of Continuous Human Presence:</h4>
+            <p>The International Space Station (ISS) marks a historic milestone as it reaches 25 years of uninterrupted human habitation in low Earth orbit. Astronauts aboard the station commemorate the occasion with special ceremonies and reflect on the scientific achievements and international collaboration that have characterized the ISS program.</p>
+        </div>
+        <p class="author">AUTHOR</p>
+    </article>
+    <article class="story">
+        <h2>STORY 4</h2>
+        <div class="story-content">
+            <img src="photos/GeneratedSpace4.jpg" alt="Story Image" class="story-image">
+            <h4>China Launches First Crewed Mission to its Space Station:</h4>
+            <p> China successfully launches its inaugural crewed mission to its recently completed space station module, marking a significant milestone in the nation's space exploration ambitions. The crew conducts experiments, tests systems, and establishes a continuous human presence aboard the Chinese space station, enhancing China's role in space exploration.</p>
+        </div>
+        <p class="author">AUTHOR</p>
+    </article>
+    <!-- Insert more stories as you like -->
+</main>
+
+<section class="submit-story">
+    <h2>Submit Your Story</h2>
+    <form id="storyForm">
+        <label for="storyTitle">Story Title:</label>
+        <input type="text" id="storyTitle" name="storyTitle" required><br><br>
+        <label for="storyImg">Image Name (in images/ directory):</label>
+        <input type="text" id="storyImg" name="storyImg" required><br><br>
+        <label for="storyText">Story Text:</label>
+        <textarea id="storyText" name="storyText" required></textarea><br><br>
+        <input type="submit" value="Submit Story">
+    </form>
+</section>
+
+<footer class="footer">
+    <p>@ThomasGilman</p>
+    <p>2024</p>
+</footer>
+
+<script src="loadStories.js"></script>
+</body>
+</html>

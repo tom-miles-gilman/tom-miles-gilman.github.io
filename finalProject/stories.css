@@ -1,0 +1,80 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-size: 16px;
+}
+
+.logo-container {
+    text-align: left;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.logo-container a {
+    color: black;
+    text-decoration: none;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 0;
+}
+
+.nav-item {
+    color: white;
+    text-decoration: none;
+    padding: 5px 20px;
+    margin: 0 10px;
+}
+
+.nav-item:hover {
+    background-color: #555;
+}
+
+.content, .submit-story {
+    flex-grow: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.story, .submit-story form {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.story-content, .story-image {
+    width: 100%;
+    height: auto;
+}
+
+.footer {
+    text-align: left;
+    padding: 0.5em;
+    background-color: #333;
+    color: white;
+}
+
+/* Form Styles */
+.submit-story h2 {
+    margin-bottom: 15px;
+}
+
+.submit-story form {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.submit-story form label, .submit-story form input, .submit-story
+{}

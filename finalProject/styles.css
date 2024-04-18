@@ -1,0 +1,99 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+}
+
+.logo-container {
+    text-align: left;
+    padding: 20px;
+    background-color: #f4f4f4;    
+}
+
+.logo-container a {
+    color: black; /* Change the color to black */
+    text-decoration: none; /* Remove the underline */
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+    padding: 10px 0;
+}
+
+.nav-item {
+    color: white;
+    text-decoration: none;
+    padding: 5px 20px;
+}
+
+.nav-item:hover {
+    background-color: #555;
+}
+
+.image-container {
+    width: 100%;
+}
+
+.header-image {
+    width: 100%;
+    display: block; /* Removes bottom space/line */
+}
+
+.stories-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+
+.story {
+    flex-basis: 20%;
+    margin: 1%;
+    box-sizing: border-box;
+}
+
+.story-image {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.story-item {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.footer {
+    text-align: left;
+    padding: .5px;
+    background-color: #333;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* To ensure the footer does not overlap content when the page content is too short, you must add padding to the bottom of the body or main content area */
+body {
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 60px; /* This should be equal or greater than the height of your footer */
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .story {
+        flex-basis: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .story {
+        flex-basis: 90%;
+    }
+}
