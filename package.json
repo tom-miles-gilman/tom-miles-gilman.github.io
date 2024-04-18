@@ -7,13 +7,20 @@
     "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["crafts", "sell", "buy", "express", "node"],
+  "keywords": [
+    "crafts",
+    "sell",
+    "buy",
+    "express",
+    "node"
+  ],
   "author": "Your Name",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "joi": "^17.4.0",
-    "multer": "^1.4.2"
+    "express": "^4.19.2",
+    "joi": "^17.12.3",
+    "mongoose": "^8.3.1",
+    "multer": "^1.4.4"
   }
 }
