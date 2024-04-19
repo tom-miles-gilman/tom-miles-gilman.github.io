@@ -71,7 +71,7 @@ body, html {
 
 .image-content img {
     max-width: 100%;
-    align-items: right;
+    align-items: left;
 }
 
 /* Footer styling */

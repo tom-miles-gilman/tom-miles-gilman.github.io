@@ -61,7 +61,7 @@ body, html {
 
 .story-item {
     display: block;
-    text-align: center;
+    text-align: left;
     text-decoration: none;
     color: black;
     font-weight: bold;
