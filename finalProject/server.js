@@ -1,6 +1,5 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const bodyParser = require('body-parser');
 const cors = require('cors');
 const path = require('path');
 
@@ -9,9 +8,7 @@ const mongoURI = 'mongodb://localhost/yourDatabase';
 
 mongoose.connect(mongoURI, {
   useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useFindAndModify: false,
-  useCreateIndex: true
+  useUnifiedTopology: true
 })
 .then(() => console.log('MongoDB Connected'))
 .catch(err => console.log(err));
@@ -20,71 +17,51 @@ const app = express();
 
 // Middleware
 app.use(cors());
-app.use(bodyParser.json());
+app.use(express.json());
 
 // Serve static files from the public directory
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Story Model - this should be in a separate file in models directory
-const storySchema = new mongoose.Schema({
-  title: String,
-  img_name: String,
-  text: String,
-  author: { type: String, default: "Anonymous" },
-  date: { type: Date, default: Date.now }
-});
+// Import the Story model from the models directory
+const Story = require('./models/story');
 
-const Story = mongoose.model('Story', storySchema);
-
-// Routes - these should be in separate files in the routes directory
-// Get Stories
-app.get('/api/stories', async (req, res) => {
-  try {
-    const stories = await Story.find();
-    res.json(stories);
-  } catch (err) {
-    res.status(500).send(err);
-  }
-});
-
-// Add Story
-app.post('/api/stories', async (req, res) => {
+// Define routes for CRUD operations
+// POST route for creating a new story
+app.post('/api/stories', (req, res) => {
   const newStory = new Story(req.body);
-  try {
-    const savedStory = await newStory.save();
-    res.json(savedStory);
-  } catch (err) {
-    res.status(400).send(err);
-  }
+  newStory.save()
+    .then(story => res.status(201).json(story))
+    .catch(err => res.status(400).json({ message: "Error saving story", error: err }));
 });
 
-// Update Story
-app.put('/api/stories/:id', async (req, res) => {
-  try {
-    const updatedStory = await Story.findByIdAndUpdate(req.params.id, req.body, { new: true });
-    res.json(updatedStory);
-  } catch (err) {
-    res.status(400).send(err);
-  }
+// GET route for fetching all stories
+app.get('/api/stories', (req, res) => {
+  Story.find()
+    .then(stories => res.json(stories))
+    .catch(err => res.status(500).json({ message: "Error fetching stories", error: err }));
 });
 
-// Delete Story
-app.delete('/api/stories/:id', async (req, res) => {
-  try {
-    await Story.findByIdAndDelete(req.params.id);
-    res.json({ message: 'Story deleted' });
-  } catch (err) {
-    res.status(500).send(err);
-  }
+// DELETE route for deleting a story
+app.delete('/api/stories/:id', (req, res) => {
+  Story.findByIdAndRemove(req.params.id)
+    .then(() => res.json({ message: "Story deleted" }))
+    .catch(err => res.status(500).json({ message: "Error deleting story", error: err }));
 });
 
-// Serve the main page of the app
+// PUT route for updating a story
+app.put('/api/stories/:id', (req, res) => {
+  Story.findByIdAndUpdate(req.params.id, req.body, { new: true })
+    .then(story => res.json(story))
+    .catch(err => res.status(400).json({ message: "Error updating story", error: err }));
+});
+
+// Catchall handler for any request that doesn't match the above
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+  res.sendFile(path.join(__dirname, 'public', 'mainPage.html'));
 });
 
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
