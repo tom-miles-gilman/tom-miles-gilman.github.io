@@ -18,12 +18,16 @@ document.getElementById('storyForm').addEventListener('submit', function(event) 
         },
         body: JSON.stringify(storyData)
     })
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) throw new Error('Network response was not ok.');
+        return response.json();
+    })
     .then(addedStory => {
         console.log('Story added:', addedStory);
         displayStories(); // Refresh the stories list
     })
-    .catch(error => console.error('Error:', error));
+
+    .catch(error => console.error("Error:", error))
 });
 
 // Function to display stories on the page
@@ -31,7 +35,7 @@ function displayStories() {
     fetch('/api/stories')
     .then(response => response.json())
     .then(stories => {
-        const storiesList = document.getElementById('storiesList'); // Make sure you have this ID in your HTML
+        const storiesList = document.getElementById('storiesList'); // Make sure I have this ID in your HTML
         storiesList.innerHTML = ''; // Clear current stories
         
         stories.forEach(story => {
