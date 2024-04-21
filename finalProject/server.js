@@ -8,10 +8,7 @@ const Story = require('./models/story'); // Ensure this path matches the locatio
 const app = express();
 const mongoURI = 'mongodb+srv://mtomgilman:3J8nEvQFwyEnfQUZ@cluster0.i7bsuyl.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
 
-mongoose.connect(mongoURI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-})
+mongoose.connect(mongoURI)
 .then(() => console.log('MongoDB Connected'))
 .catch(err => console.log(err));
 
@@ -20,7 +17,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // POST route to create a new story
-app.post('/api/stories', cors(), (req, res) => {
+app.post('/api/stories', (req, res) => {
   const newStory = new Story(req.body);
   newStory.save()
     .then(story => res.status(201).json(story))
@@ -36,7 +33,7 @@ app.get('/api/stories', (req, res) => {
 
 // DELETE route to delete a story
 app.delete('/api/stories/:id', (req, res) => {
-  Story.findByIdAndRemove(req.params.id)
+  Story.findByIdAndDelete(req.params.id)
     .then(() => res.json({ message: "Story deleted" }))
     .catch(err => res.status(500).json({ message: "Error deleting story", error: err }));
 });
