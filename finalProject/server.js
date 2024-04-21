@@ -20,7 +20,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // POST route to create a new story
-app.post('/api/stories', (req, res) => {
+app.post('/api/stories', cors(), (req, res) => {
   const newStory = new Story(req.body);
   newStory.save()
     .then(story => res.status(201).json(story))
