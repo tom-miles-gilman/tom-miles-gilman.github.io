@@ -61,12 +61,14 @@ body, html {
 .image-content {
     flex-basis: 30%; /* Maintain the width of the image content */
     margin-left: 20px; /* Further increase left margin */
+    margin-right: 40px;
 }
 
 /* Styling for text content */
 .text-content {
     flex-basis: 70%;
     padding-right: 1px;
+    padding-left: 40px;
 }
 
 .image-content img {
